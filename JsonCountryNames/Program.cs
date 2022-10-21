@@ -10,3 +10,12 @@ var country = data.Properties().FirstOrDefault(p => p.Name == "België");
 Console.WriteLine(country.Name);
 Console.WriteLine(country);
 Console.WriteLine(country.Value["EN"]);
+
+var countries = data.Properties().Select(p => p.Name).ToList();
+
+foreach (var item in countries)
+{
+	Console.WriteLine(item);
+}
+
+Console.WriteLine(country.Value["OO"]);
